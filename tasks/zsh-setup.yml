@@ -1,0 +1,6 @@
+- name: Install zsh plugin autosuggestions
+  ansible.builtin.git:
+    repo: "https://github.com/zsh-users/zsh-autosuggestions"
+    dest: "~/.zsh/plugins/zsh-autosuggestions"
+  tags:
+    - zsh
