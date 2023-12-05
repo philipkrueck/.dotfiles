@@ -2,3 +2,8 @@
   shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   tags:
     - brew
+
+- name: Install all software managed via brew (may take a while)
+  shell: brew bundle --file Brewfile
+  tags:
+    - brew
