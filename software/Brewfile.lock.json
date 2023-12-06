@@ -8,13 +8,13 @@
         "revision": "19605d63a1092d47d0a3efed3170c1b9b9c3951a"
       },
       "hashicorp/tap": {
-        "revision": "f38c9d4b3bf5be3fa32af4d7da35d6840dda4cb9"
+        "revision": "0e5a9cd2b70146969c744e8fc2ba9ed4579fe51f"
       },
       "homebrew/bundle": {
         "revision": "d6fbeee54ba344be59731ff3e93fb105b2567e34"
       },
       "homebrew/cask-fonts": {
-        "revision": "4f7a21de57731f3673317c9521eb8bd53071deaa"
+        "revision": "412931b7138ad9cec5a6e9ef6fce6a3b5259079a"
       },
       "homebrew/services": {
         "revision": "68336e969809338fa3f072dc05091912fa710a6d"
@@ -23,7 +23,7 @@
         "revision": "d4c95802ca991ea41512320af412072e775c1eb7"
       },
       "minio/stable": {
-        "revision": "a8fad26c48a49098e2b9cccc7bbd02ac29621a30"
+        "revision": "876e1440ea1630eee189457e3ad888bf02d12b6a"
       },
       "pulumi/tap": {
         "revision": "3a18b2a7a68836ccbe01e75c4f07ed2b5d404f6c"
@@ -1808,7 +1808,7 @@
         "bottle": false
       },
       "minio/stable/mc": {
-        "version": "RELEASE.2023-12-02T02-03-28Z_1",
+        "version": "RELEASE.2023-12-02T11-24-10Z_1",
         "bottle": false
       },
       "pulumi/tap/pulumictl": {
@@ -2024,7 +2024,7 @@
   "system": {
     "macos": {
       "sonoma": {
-        "HOMEBREW_VERSION": "4.1.23",
+        "HOMEBREW_VERSION": "4.1.24",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "15.0.0.40.1",

@@ -1,9 +1,15 @@
+- name: Check if brew is installed
+  shell: command -v brew
+  register: brew_installed
+  ignore_errors: true
+
 - name: Install brew
   shell: /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  when: brew_installed != 0
   tags:
     - brew
 
 - name: Install all software managed via brew (may take a while)
-  shell: brew bundle --file Brewfile
+  shell: brew bundle --file software/Brewfile
   tags:
     - brew

@@ -1,0 +1,5 @@
+- name: Install dotfiles to ~/.config folder
+  shell: stow --target=$HOME/.config dots
+  tags:
+    - dots
+    - install
