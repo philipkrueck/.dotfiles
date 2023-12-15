@@ -1,0 +1,33 @@
+
+# Variables
+DOTFILES=~/Developer/Personal/dotfiles
+
+# Load plugins
+# TODO: here
+
+
+bindkey -s ^f "tmux-sessionizer\n"
+
+# Load aliases
+source $DOTFILES/aliases/random.zsh
+source $DOTFILES/aliases/git.zsh
+source $DOTFILES/aliases/work.zsh # TODO: need to encrypt this
+
+# Append bins to path
+export PATH="$HOME/.local/bin:$PATH"
+
+# Use GNU tools installed via brew over MacOS 
+PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
+
+# Escape square brackets by default
+unsetopt nomatch
+
+# add gcloud to path
+source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc"
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+# setup starship prompt
+eval "$(starship init zsh)"
+
+# setup fzf completions
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

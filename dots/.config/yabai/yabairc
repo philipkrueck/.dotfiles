@@ -24,11 +24,11 @@ yc split_type auto  #
 yc auto_balance off #
 
 # padding & gaps
-yc top_padding 4    # maximize screen real estate
-yc bottom_padding 4 # maximize screen real estate
-yc left_padding 4   # maximize screen real estate
-yc right_padding 4  # maximize screen real estate
-yc window_gap 4     # maximize screen real estate
+yc top_padding 0    # maximize screen real estate
+yc bottom_padding 0 # maximize screen real estate
+yc left_padding 0   # maximize screen real estate
+yc right_padding 0  # maximize screen real estate
+yc window_gap 0     # maximize screen real estate
 
 yc layout bsp             # layout: binary space partitioning
 yc mouse_modifier alt     # modifier for clicking and dragging with mouse
