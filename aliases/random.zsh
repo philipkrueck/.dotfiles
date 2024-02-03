@@ -13,11 +13,9 @@ alias sc='source $HOME/.zshrc'
 # empty the trash
 alias emptytrash='sudo rm -rf $HOME/.local/share/Trash/files'
 
-# launch files with with vs code
-alias -s {ts,md,json}=code
-
 # save contents of stdin to clipboard
 alias clip='pbcopy'
+alias cl='pbcopy'
 
 # use python3 when interpreting python files
 alias python='python3'
@@ -30,7 +28,6 @@ alias k='kubectl'
 
 # docker shortcuts
 alias d='docker'
-
 alias dc='docker-compose'
 
 # deploy to dev env
