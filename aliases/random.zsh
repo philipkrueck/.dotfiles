@@ -23,6 +23,8 @@ alias python='python3'
 # neovim shortcut
 alias n='nvim'
 
+alias h='history'
+
 # kubernetes shortcut
 alias k='kubectl'
 
