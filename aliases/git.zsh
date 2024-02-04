@@ -33,6 +33,8 @@ alias grbc='git rebase --continue'
 alias gsh='git stash'
 alias gsha='git stash apply'
 
+alias gl='git log | n -R'
+
 alias pr='gh pr create -f "$@"'
 
 alias ghr='gh release create ${1?"Specify tag"} --generate-notes'
