@@ -6,6 +6,7 @@ return {
 	font = wezterm.font("FiraCode Nerd Font Mono"),
 	font_size = 20.0,
 	default_cursor_style = "SteadyBar",
+	macos_window_background_blur = 30,
 
 	window_decorations = "RESIZE",
 	window_background_opacity = 0.8,
