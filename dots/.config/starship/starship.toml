@@ -13,6 +13,21 @@ right_format = """$all"""
 [directory.substitutions]
 '~/tests/starship-custom' = 'work-project'
 
+[git_branch]
+truncation_length = 8
+
+[git_status]
+format = '([$all_status$ahead_behind]($style) )'
+
+[golang]
+disabled = true
+
+[kubernetes]
+disabled = true
+
+[python]
+disabled = true
+
 [username]
 disabled = true
 
@@ -28,16 +43,7 @@ disabled = true
 [docker_context]
 disabled = true
 
-[git_branch]
-truncation_length = 8
-
-[git_status]
-format = '([$all_status$ahead_behind]($style) )'
-
-[golang]
-format = '[ $version](bold cyan) '
-
-[kubernetes]
+[vagrant]
 disabled = true
 
 [palettes.catppuccin_mocha]
