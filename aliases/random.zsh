@@ -25,6 +25,8 @@ alias n='nvim'
 
 alias h='history'
 
+alias tf='terraform'
+
 # kubernetes shortcut
 alias k='kubectl'
 
