@@ -41,9 +41,6 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 # setup starship prompt
 eval "$(starship init zsh)"
 
-
-
-
 # setup fzf completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -62,3 +59,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# fnm
+export PATH="/Users/philipkrueck/Library/Application Support/fnm:$PATH"
+eval "`fnm env`"
+
+# zoxide
+eval "$(zoxide init zsh)"
