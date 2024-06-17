@@ -13,8 +13,6 @@ plug "zap-zsh/fzf"
 plug "zsh-users/zsh-autosuggestions"
 plug "zsh-users/zsh-syntax-highlighting"
 plug "zsh-users/zsh-history-substring-search"
-plug "esc/conda-zsh-completion"
-plug "esc/conda-zsh-completion"
 plug "hlissner/zsh-autopair"
 # Load and initialise completion system
 autoload -Uz compinit
@@ -41,22 +39,6 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # setup fzf completions
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/philipkrueck/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/philipkrueck/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/philipkrueck/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/philipkrueck/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 
 # fnm
 export PATH="/Users/philipkrueck/Library/Application Support/fnm:$PATH"
