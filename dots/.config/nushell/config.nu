@@ -397,7 +397,7 @@ $env.config = {
           mode: [emacs, vi_normal, vi_insert]
           event: {
             send: executehostcommand,
-            cmd: "tmux-sessionizer"
+            cmd: "nu ~/.config/nushell/tmux-sessionizer.nu"
           }
         }
         {

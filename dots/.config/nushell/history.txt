@@ -88,3 +88,6 @@ z
 ls
 z
 cd
+tmux-sessionizer 
+tmux-sessionizer.nu
+mv dots/.local/bin/tmux-sessionizer.nu dots/.config/nushell/
