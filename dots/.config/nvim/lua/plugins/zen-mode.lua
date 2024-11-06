@@ -3,7 +3,7 @@ return {
   opts = {
     window = {
       backdrop = 0.95,
-      width = 90, -- width of the Zen window (default: 120)
+      width = 120, -- width of the Zen window (default: 120)
       height = 1, -- height of the Zen window
       options = {
         signcolumn = "no", -- disable signcolumn
