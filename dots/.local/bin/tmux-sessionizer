@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-session=$(find ~ ~/Developer/Work ~/Developer/Personal ~/Developer/Masters ~/Developer/Masters/AI ~/Developer/Masters/AOS ~/Developer/Masters/KBAI ~/Developer/Masters/SDP -maxdepth 1 -mindepth 1 -type d | fzf)
+session=$(find ~ ~/Developer/Work ~/Developer/Personal ~/Developer/Masters ~/Developer/Masters/AI ~/Developer/Masters/AOS ~/Developer/Masters/KBAI ~/Developer/Masters/SDP ~/Developer/Masters/NLP ~/Developer/Masters/GPUHS -maxdepth 1 -mindepth 1 -type d | fzf)
 session_name=$(basename $session | tr . _)
 
 if ! tmux has-session -t $session_name 2>/dev/null; then

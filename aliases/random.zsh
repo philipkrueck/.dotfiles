@@ -4,8 +4,8 @@ alias nano='micro'
 # bat is a better version of cat
 alias cat='bat'
 
-# exa is a better version of ls
-alias ls='exa'
+# eza is a better version of ls
+alias ls='eza'
 
 # sourcing of zshrc changes
 alias sc='source $HOME/.zshrc'
