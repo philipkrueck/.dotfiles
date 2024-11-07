@@ -4,10 +4,5 @@
 
 vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Go to right window", remap = true })
 
-vim.keymap.set(
-  "n",
-  "<C-f>",
-  ":!tmux neww nu ~/.config/nushell/tmux-sessionizer.nu<CR>",
-  { noremap = true, silent = true }
-)
+vim.keymap.set("n", "<C-f>", ":!tmux neww tmux_session<CR>", { noremap = true, silent = true })
 -- vim.keymap.set("n", "<C-f>", ":!tmux neww tmux-sessionizer<CR>", { noremap = true, silent = true })

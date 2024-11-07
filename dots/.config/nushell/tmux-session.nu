@@ -1,5 +1,4 @@
-def tmux_sessionizer [] {
-
+def tmux_session [] {
   try {
     let top_dirs = [
       ~/Developer/Work
@@ -35,4 +34,3 @@ def tmux_sessionizer [] {
   }
 }
 
-tmux_sessionizer

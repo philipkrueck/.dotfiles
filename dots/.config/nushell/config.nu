@@ -397,7 +397,7 @@ $env.config = {
           mode: [emacs, vi_normal, vi_insert]
           event: {
             send: executehostcommand,
-            cmd: "nu ~/.config/nushell/tmux-sessionizer.nu"
+            cmd: "tmux_session"
           }
         }
         {
@@ -960,5 +960,7 @@ def gpd [] { # deploy to dev env
 
 # TODO: add shell aliases for work
 
+source tmux-session.nu
 source ~/.cache/carapace/init.nu
+
 use ~/.cache/starship/init.nu
