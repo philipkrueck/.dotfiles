@@ -91,3 +91,15 @@ cd
 tmux-sessionizer 
 tmux-sessionizer.nu
 mv dots/.local/bin/tmux-sessionizer.nu dots/.config/nushell/
+gp
+gst
+emptytrash 
+gst
+gaa
+gst
+gd history.txt
+gst
+gaa
+gst
+gaa
+gst
