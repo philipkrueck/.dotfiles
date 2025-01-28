@@ -97,6 +97,8 @@ use std "path add"
 # path add ($env.HOME | path join ".local" "bin")
 # $env.PATH = ($env.PATH | uniq)
 path add /opt/homebrew/bin
+path add /Users/philipkrueck/.cargo/bin
+path add /Users/philipkrueck/.local/share/solana/install/active_release/bin
 path add ($env.HOME | path join ".local" "bin")
 path add (echo (brew --prefix) | path join "opt" "gnu-sed" "libexec" "gnubin")
 
@@ -110,6 +112,7 @@ mkdir ~/.cache/starship
 starship init nu | save -f ~/.cache/starship/init.nu
 zoxide init nushell | save -f ~/.zoxide.nu
 
+$env.STARSHIP_CONFIG = "/Users/philipkrueck/.config/starship/starship.toml"
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 mkdir ~/.cache/carapace
 carapace _carapace nushell | save --force ~/.cache/carapace/init.nu

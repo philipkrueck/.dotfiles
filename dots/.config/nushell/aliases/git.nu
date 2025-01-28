@@ -1,5 +1,5 @@
 alias gi = git init  # todo add github repo creation + connection
-alias gl = git log
+alias glo = git log
 alias glp = git log --graph --pretty=oneline --abbrev-commit # git log w/t pretty history
 alias gco = git checkout
 alias gcob = git checkout -b

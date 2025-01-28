@@ -147,7 +147,7 @@ let light_theme = {
 
 # The default config record. This is where much of your global configuration is setup.
 $env.config = {
-    show_banner: true # true or false to enable or disable the welcome banner at startup
+    show_banner: false # true or false to enable or disable the welcome banner at startup
 
     ls: {
         use_ls_colors: true # use the LS_COLORS environment variable to colorize output
@@ -913,6 +913,14 @@ source aliases/random.nu
 source aliases/work.nu
 
 # ENVIRONMENT
-source tmux-session.nu
+source scripts/tmux-session.nu
 source ~/.cache/carapace/init.nu
 use ~/.cache/starship/init.nu
+
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+$env.USE_GKE_GCLOUD_AUTH_PLUGIN = 'True'
+
+# fnm is currently not supported - workaround: https://github.com/Southclaws/fnm-nushell
+fnm env --shell powershell | /Users/philipkrueck/go/bin/fnm-nushell | from json | load-env
