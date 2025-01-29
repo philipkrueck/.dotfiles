@@ -920,7 +920,5 @@ use ~/.cache/starship/init.nu
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
-$env.USE_GKE_GCLOUD_AUTH_PLUGIN = 'True'
-
 # fnm is currently not supported - workaround: https://github.com/Southclaws/fnm-nushell
 fnm env --shell powershell | /Users/philipkrueck/go/bin/fnm-nushell | from json | load-env

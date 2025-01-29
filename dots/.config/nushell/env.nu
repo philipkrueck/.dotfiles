@@ -99,6 +99,7 @@ use std "path add"
 path add /opt/homebrew/bin
 path add /Users/philipkrueck/.cargo/bin
 path add /Users/philipkrueck/.local/share/solana/install/active_release/bin
+path add /opt/homebrew/share/google-cloud-sdk/bin
 path add ($env.HOME | path join ".local" "bin")
 path add (echo (brew --prefix) | path join "opt" "gnu-sed" "libexec" "gnubin")
 
