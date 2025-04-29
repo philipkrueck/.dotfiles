@@ -11,6 +11,17 @@ return {
 	window_decorations = "RESIZE",
 	window_background_opacity = 0.8,
 
+	keys = {
+		{
+			key = "o",
+			mods = "CTRL",
+			action = wezterm.action_callback(function(window, pane)
+				print("Ctrl + O pressed")
+				pane:send_text("\n")
+			end),
+		},
+	},
+
 	-- make Zen Mode work
 	wezterm.on("user-var-changed", function(window, pane, name, value)
 		local overrides = window:get_config_overrides() or {}
