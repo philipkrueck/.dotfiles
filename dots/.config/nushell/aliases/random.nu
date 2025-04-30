@@ -8,6 +8,7 @@ alias n = nvim
 alias h = history
 alias tf = terraform
 alias k = kubectl
+alias kgp = kubectl get po
 alias d = docker
 alias dc = docker-compose
 alias gcloudwork = gcloud config set account pkrueck@genesiscloud.com
