@@ -22,5 +22,5 @@ alias grb = git rebase
 alias grbc = git rebase --continue
 alias gsha = git stash apply
 alias gsh = git stash
-alias gl = git log | n -R
+alias gl = git log
 alias pr = gh pr create -f "$@"
