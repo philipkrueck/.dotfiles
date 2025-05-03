@@ -13,4 +13,6 @@ alias d = docker
 alias dc = docker-compose
 alias gcloudwork = gcloud config set account pkrueck@genesiscloud.com
 alias gcloudprivate = gcloud config set account philipkrck@gmail.com
+alias klocal = kubectl config use-context rancher-desktop
+
 # alias xcodeupdate = sudo softwareupdate -i -a; xcode-select --install # update apple developer tools
