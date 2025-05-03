@@ -98,6 +98,7 @@ use std "path add"
 # $env.PATH = ($env.PATH | uniq)
 path add /opt/homebrew/bin
 path add /Users/philipkrueck/.cargo/bin
+path add /Users/philipkrueck/.rd/bin # get utilites including helm, kubectl, docker through rancher desktop
 path add /Users/philipkrueck/.local/share/solana/install/active_release/bin
 path add /opt/homebrew/share/google-cloud-sdk/bin
 path add ($env.HOME | path join ".local" "bin")
