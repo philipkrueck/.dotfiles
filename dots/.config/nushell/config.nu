@@ -909,6 +909,7 @@ $env.config = {
 
 # ALIASES
 source aliases/git.nu
+source aliases/k8s.nu
 source aliases/random.nu
 source aliases/work.nu
 
