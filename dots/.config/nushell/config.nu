@@ -401,6 +401,16 @@ $env.config = {
           }
         }
         {
+          name: tmux_sessionizer
+          modifier: CONTROL
+          keycode: Char_k
+          mode: [emacs, vi_normal, vi_insert]
+          event: {
+            send: executehostcommand,
+            cmd: "kctx"
+          }
+        }
+        {
             name: completion_menu
             modifier: none
             keycode: tab
