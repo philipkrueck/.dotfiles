@@ -3,6 +3,7 @@ def tmux_session [] {
     let top_dirs = [
       ~/Developer/Work
       ~/Developer/Personal
+      "~/Library/Mobile Documents/iCloud~md~obsidian/Documents"
     ]
 
     let dirs = $top_dirs | each { |d| ls ($d | path expand) } | flatten  | where type == "dir" | get name
