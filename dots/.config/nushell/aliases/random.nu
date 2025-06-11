@@ -5,6 +5,7 @@ alias clip = pbcopy # save contents of stdin to clipboard
 alias cl = pbcopy
 alias python = python3
 alias n = nvim
+alias l = lazygit
 alias h = history
 alias tf = terraform
 alias k = kubectl
