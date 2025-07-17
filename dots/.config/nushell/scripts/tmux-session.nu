@@ -3,10 +3,13 @@ def tmux_session [] {
     let top_dirs = [
       ~/Developer/Work
       ~/Developer/Personal
-      "~/Library/Mobile Documents/iCloud~md~obsidian/Documents"
     ]
-
-    let dirs = $top_dirs | each { |d| ls ($d | path expand) } | flatten  | where type == "dir" | get name
+    let single_dirs = [
+      "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Brain"
+      "/Users/philipkrueck/Downloads"
+    ]
+    let top_dirs_children = $top_dirs | each { |d| ls ($d | path expand) } | flatten  | where type == "dir" | get name
+    let dirs = $top_dirs_children ++ $single_dirs
     let session_path = $dirs | input list --fuzzy 'Choose a session'
     let session = $session_path | path basename
 
