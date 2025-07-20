@@ -3,15 +3,22 @@ def tmux_session [] {
     let top_dirs = [
       ~/Developer/Work
       ~/Developer/Personal
-    ]
+    ] | each { |d| ($d | path expand) }
     let single_dirs = [
+      ~/.config
+      ~/Downloads
       "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Brain"
-      "/Users/philipkrueck/Downloads"
-    ]
-    let top_dirs_children = $top_dirs | each { |d| ls ($d | path expand) } | flatten  | where type == "dir" | get name
+    ] | each { |d| ($d | path expand)}
+    let top_dirs_children = $top_dirs | each { |d| ls $d } | flatten | where type == "dir" | get name
     let dirs = $top_dirs_children ++ $single_dirs
     let session_path = $dirs | input list --fuzzy 'Choose a session'
     let session = $session_path | path basename
+
+    let session = if ($session | str starts-with ".") {
+      "_" + ($session | str substring 1..)
+    } else {
+      $session
+    }
 
     try {
       tmux has-session -t $session # will throw an error if session doesn't exist
