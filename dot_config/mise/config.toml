@@ -1,0 +1,5 @@
+[tools]
+chezmoi = "latest"
+jq = "latest"
+neovim = "latest"
+node = "latest"
