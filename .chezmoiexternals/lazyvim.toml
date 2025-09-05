@@ -4,4 +4,4 @@ url = "https://github.com/LazyVim/starter/archive/refs/heads/main.tar.gz"
 stripComponents = 1
 
 # TODO: exclude everything that isn't necessary
-exclude = ["**/options.lua", "**/keymaps.lua", "**/autocmds.lua"]
+exclude = ["**/options.lua", "**/keymaps.lua", "**/autocmds.lua", "LICENSE", "README.md"]
