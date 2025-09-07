@@ -1,0 +1,5 @@
+[".local/bin/zellij"]
+url = {{ gitHubLatestReleaseAssetURL "zellij-org/zellij" "zellij-x86_64-unknown-linux-musl.tar.gz" | quote }}
+type = "archive-file"
+executable = true
+path = "zellij"
