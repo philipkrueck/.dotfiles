@@ -2,6 +2,12 @@
 
 set pipefail -eou
 
+XDG_CONFIG_HOME="$HOME/.config"
+
+if ! command -v chezmoi >/dev/null; then
+  sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:philipkrueck/.dotfiles.git
+fi
+
 if command -v zsh >/dev/null; then
   sudo chsh -s $(command -v zsh) $USER
 fi
@@ -13,10 +19,6 @@ fi
 # Check if pure is already installed
 if [ ! -d "$HOME/.zsh/pure" ]; then
   git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-fi
-
-if ! command -v chezmoi >/dev/null; then
-  sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:philipkrueck/.dotfiles.git
 fi
 
 exit 0
