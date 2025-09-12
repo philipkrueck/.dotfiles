@@ -1,56 +1,48 @@
-PLUGIN_DIR="$CONFIG_DIR/plugins"
+#!/usr/bin/env sh
 
-##### Bar Appearance #####
+source "$HOME/.config/sketchybar/colors.sh" # Loads all defined colors
 
-sketchybar --bar position=top height=40 blur_radius=30 color=0x40000000
+ITEM_DIR="$HOME/.config/sketchybar/items" # Directory where the items are configured
+PLUGIN_DIR="$HOME/.config/sketchybar/plugins" # Directory where all the plugin scripts are stored
 
-##### Changing Defaults #####
+FONT="SF Pro" # Needs to have Regular, Bold, Semibold, Heavy and Black variants
 
-default=(
-  padding_left=5
-  padding_right=5
-  icon.font="Hack Nerd Font:Bold:17.0"
-  label.font="Hack Nerd Font:Bold:14.0"
-  icon.color=0xffffffff
-  label.color=0xffffffff
-  icon.padding_left=4
-  icon.padding_right=4
-  label.padding_left=4
-  label.padding_right=4
-)
-sketchybar --default "${default[@]}"
+POPUP_BORDER_WIDTH=2
+POPUP_CORNER_RADIUS=11
 
-##### Adding Aerospace Workspace Indicators #####
+SHADOW=on
 
-sketchybar --add event aerospace_workspace_change
+# Setting up the general bar appearance and default values
+sketchybar --bar     height=38                                        \
+                     color=$BAR_COLOR                                  \
+                     shadow=$SHADOW                                    \
+                     position=top                                     \
+                     sticky=on                                         \
+                     corner_radius=9                                   \
+                     blur_radius=20                                    \
+                                                                       \
+           --default updates=when_shown                                \
+                     icon.font="$FONT:Bold:14.0"                       \
+                     icon.color=$ICON_COLOR                            \
+                     icon.padding_left=$PADDINGS                       \
+                     icon.padding_right=$PADDINGS                      \
+                     label.font="$FONT:Semibold:13.0"                  \
+                     label.color=$LABEL_COLOR                          \
+                     label.padding_left=$PADDINGS                      \
+                     popup.background.border_width=2                   \
+                     popup.background.corner_radius=11                 \
+                     popup.background.border_color=$POPUP_BORDER_COLOR \
+                     popup.background.color=$POPUP_BACKGROUND_COLOR    \
+                     popup.background.shadow.drawing=$SHADOW
 
-for sid in $(aerospace list-workspaces --all); do
-    sketchybar --add item space.$sid left \
-        --subscribe space.$sid aerospace_workspace_change \
-        --set space.$sid \
-        background.color=0x44ffffff \
-        background.corner_radius=5 \
-        background.height=20 \
-        background.drawing=off \
-        label="$sid" \
-        script="$CONFIG_DIR/plugins/aerospace.sh $sid"
-done
+# Left
+source "$ITEM_DIR/spaces.sh"
 
-##### Adding Left Items #####
+# Right
+source "$PLUGIN_DIR/battery.sh"
 
-sketchybar --add item chevron left \
-           --set chevron icon= label.drawing=off \
-           --add item front_app left \
-           --set front_app icon.drawing=off script="$PLUGIN_DIR/front_app.sh" \
-           --subscribe front_app front_app_switched
 
-##### Adding Right Items #####
-
-sketchybar --add item clock right \
-           --set clock update_freq=10 icon=  script="$PLUGIN_DIR/clock.sh" \
-           --add item battery right \
-           --set battery update_freq=120 script="$PLUGIN_DIR/battery.sh" \
-           --subscribe battery system_woke power_source_change
-
-##### Force all scripts to run the first time (never do this in a script) #####
+############## FINALIZING THE SETUP ##############
 sketchybar --update
+
+echo "sketchybar configuation loaded.."
