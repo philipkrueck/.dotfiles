@@ -18,11 +18,10 @@ return {
       filesystem = {
         filtered_items = {
           hide_dotfiles = false,
-          -- hide_gitignored = true,
+          hide_gitignored = true,
         },
-        -- TODO: figure out why this is not working
-        never_show_by_pattern = { -- uses glob style patterns
-          "**/.git/**",
+        never_show_by_pattern = {
+          "**/.git/**/*",
         },
       },
     },
