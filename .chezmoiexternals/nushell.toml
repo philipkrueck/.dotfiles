@@ -1,5 +1,6 @@
-[".local/bin/zellij"]
-url = {{ gitHubLatestReleaseAssetURL "zellij-org/zellij" "zellij-x86_64-unknown-linux-musl.tar.gz" | quote }}
+[".local/bin/nu"]
+url = {{ gitHubLatestReleaseAssetURL "nushell/nushell" "nu-0.107.0-aarch64-unknown-linux-musl.tar.gz" | quote }}
 type = "archive-file"
+stripComponents = 1
 executable = true
-path = "zellij"
+path = "nu"           # maybe change to nu
