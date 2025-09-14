@@ -1,0 +1,4 @@
+#!/usr/bin/env nu
+
+source ./tmux-session.nu
+tmux_session
