@@ -916,7 +916,7 @@ $env.config = {
 source aliases/git.nu
 source aliases/k8s.nu
 source aliases/random.nu
-source aliases/work.nu
+# source aliases/work.nu
 
 # ENVIRONMENT
 source scripts/tmux-session.nu

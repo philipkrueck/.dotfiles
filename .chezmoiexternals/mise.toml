@@ -1,4 +1,5 @@
 [".local/bin/mise"]
-type = "file"
-executable = true
-url = "https://mise.jdx.dev/mise-latest-{{.chezmoi.os}}-{{.chezmoi.arch}}"
+type = "archive-file"
+url = "https://github.com/jdx/mise/releases/download/v2025.9.10/mise-v2025.9.10-macos-arm64.tar.gz"
+stripComponents = 1
+include = ["mise"]

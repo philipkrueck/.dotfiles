@@ -1,7 +1,9 @@
 [tools]
 chezmoi = "latest"
-jq = "latest"
 neovim = "latest"
-node = "latest"
+jq = "latest"
 fd = "latest"
 rg = "latest"
+
+node = "latest"
+aws-cli = "latest"

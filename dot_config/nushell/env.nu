@@ -102,7 +102,6 @@ path add /Users/philipkrueck/.rd/bin # get utilites including helm, kubectl, doc
 path add /Users/philipkrueck/.local/share/solana/install/active_release/bin
 path add /opt/homebrew/share/google-cloud-sdk/bin
 path add ($env.HOME | path join ".local" "bin")
-path add (echo (brew --prefix) | path join "opt" "gnu-sed" "libexec" "gnubin")
 
 # To load from a custom file you can use:
 # source ($nu.default-config-dir | path join 'custom.nu')
