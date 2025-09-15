@@ -926,17 +926,3 @@ use ~/.cache/starship/init.nu
 
 mkdir ($nu.data-dir | path join "vendor/autoload")
 starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
-
-# fnm currently does not support nushell natively - workaround: https://github.com/Southclaws/fnm-nushell
-if not (which fnm | is-empty) {
-    fnm env --json | from json | load-env
-
-    $env.PATH = $env.PATH | prepend ($env.FNM_MULTISHELL_PATH | path join "bin")
-
-    $env.config.hooks.env_change.PWD = (
-        $env.config.hooks.env_change.PWD? | append {
-            condition: {|| ['.nvmrc' '.node-version'] | any {|el| $el | path exists}}
-            code: {|| fnm use}
-        }
-    )
-}
