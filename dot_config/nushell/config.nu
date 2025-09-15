@@ -919,6 +919,7 @@ source aliases/random.nu
 # source aliases/work.nu
 
 # ENVIRONMENT
+source ~/.config/nushell/mise.nu
 source scripts/tmux-session.nu
 source ~/.cache/carapace/init.nu
 use ~/.cache/starship/init.nu
