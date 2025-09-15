@@ -1,5 +1,7 @@
-aliases/work.zsh
+dot_config/nushell/namecheap/**/*
+dot_config/nushell/history.txt
+
 dots/.config/nushell/aliases/work.nu
 dots/.config/nushell/history.txt
-.DS_Store
 
+.DS_Store
