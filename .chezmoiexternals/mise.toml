@@ -1,5 +1,4 @@
 [".local/bin/mise"]
 type = "archive-file"
 url = "https://github.com/jdx/mise/releases/download/v2025.9.10/mise-v2025.9.10-macos-arm64.tar.gz"
-stripComponents = 1
-include = ["mise"]
+include = ["mise/bin/mise"]
