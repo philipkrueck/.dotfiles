@@ -9,3 +9,4 @@ node = "latest"
 aws-cli = "latest"
 kubectl = "latest"
 kubeseal = "latest"
+cosign = "latest"   # used to verify artifact signatures
