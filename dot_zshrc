@@ -81,3 +81,16 @@ if command -v lsd > /dev/null ; then
   alias lla='ls -lgha'
   alias lt='ls --tree'
 fi
+
+
+# ~~~~~~~~~~~~~~~ Other Config ~~~~~~~~~~~~~~~~~~~~~~~~
+
+# Escape square brackets by default
+unsetopt nomatch
+
+# zoxide
+eval "$(zoxide init zsh)"
+
+# starship prompt
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+eval "$(starship init zsh)"
