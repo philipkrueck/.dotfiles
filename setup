@@ -8,23 +8,8 @@ if ! command -v chezmoi >/dev/null; then
   sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:philipkrueck/.dotfiles.git
 fi
 
-# if command -v nu >/dev/null; then
-#   sudo chsh -s $(command -v nu) $USER
-# fi
-
-# if [ ! -d "$HOME/.zsh" ]; then
-#   mkdir -p "$HOME/.zsh"
-# fi
-#
-# # Check if pure is already installed
-# if [ ! -d "$HOME/.zsh/pure" ]; then
-#   git clone https://github.com/sindresorhus/pure.git "$HOME/.zsh/pure"
-# fi
-
-# Setup nushell
-# ls -la ~/.local/bin
-# echo "~/.local/bin/nu" | sudo tee -a /etc/shells
-# sudo chsh -s ~/.local/bin/nu $USER
-# /usr/.local/bin/nu
+if command -v nu >/dev/null; then
+  sudo chsh -s $(command -v nu) $USER
+fi
 
 exit 0
