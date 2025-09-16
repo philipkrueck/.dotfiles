@@ -8,11 +8,4 @@ if ! command -v chezmoi >/dev/null; then
   sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:philipkrueck/.dotfiles.git
 fi
 
-<<<<<<< Updated upstream
-if command -v nu >/dev/null; then
-  sudo chsh -s $(command -v nu) $USER
-fi
-
-=======
->>>>>>> Stashed changes
 exit 0
