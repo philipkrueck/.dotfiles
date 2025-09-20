@@ -12,7 +12,6 @@ kubectl = "latest"
 kubeseal = "latest"
 cosign = "latest"      # used to verify artifact signatures
 kind = "latest"
-terraform = "latest"
 python = "3.10"
 age = "latest"
 carapace = "latest"
