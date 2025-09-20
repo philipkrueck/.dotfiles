@@ -30,7 +30,7 @@ def tmux_session [] {
     try {
       $env.TMUX # will throw an error if not in tmux
       tmux switch-client -t $session
-    } catch { 
+    } catch {
       tmux attach-session -t $session
     }
   } catch {
