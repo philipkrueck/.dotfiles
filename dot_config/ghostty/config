@@ -1,0 +1,9 @@
+font-family = FiraCode Nerd Font Mono
+font-size = 20.0
+
+theme = Catppuccin Mocha
+window-theme = auto
+
+macos-titlebar-style = hidden
+macos-non-native-fullscreen = true
+macos-window-shadow = false
