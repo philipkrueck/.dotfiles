@@ -86,40 +86,5 @@ $env.NU_PLUGIN_DIRS = [
     ($nu.default-config-dir | path join 'plugins') # add <nushell-config-dir>/plugins
 ]
 
-# To add entries to PATH (on Windows you might use Path), you can use the following pattern:
-# $env.PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
-# An alternate way to add entries to $env.PATH is to use the custom command `path add`
-# which is built into the nushell stdlib:
-use std "path add"
-# $env.PATH = ($env.PATH | split row (char esep))
-# path add /some/path
-# path add ($env.CARGO_HOME | path join "bin")
-# path add ($env.HOME | path join ".local" "bin")
-# $env.PATH = ($env.PATH | uniq)
-path add /opt/homebrew/bin
-path add /Users/philipkrueck/.cargo/bin
-path add /Users/philipkrueck/.rd/bin # get utilites including helm, kubectl, docker through rancher desktop
-path add /Users/philipkrueck/.local/share/solana/install/active_release/bin
-path add /opt/homebrew/share/google-cloud-sdk/bin
-path add ($env.HOME | path join ".local" "bin")
-
-# To load from a custom file you can use:
-# source ($nu.default-config-dir | path join 'custom.nu')
-source ~/.config/nushell/mise.nu
-
-$env.EDITOR = "nvim"
-$env.DOTFILES = "~/Developer/Personal/dotfiles"
-
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
-zoxide init nushell | save -f ~/.zoxide.nu
-
-$env.STARSHIP_CONFIG = "/Users/philipkrueck/.config/starship/starship.toml"
-$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
-
-# Env for namecheap
-source ~/.config/nushell/namecheap/env.nu
-
-mkdir ~/.cache/carapace
-carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+# -------------------------------------------------------------------------------
 

@@ -912,6 +912,36 @@ $env.config = {
     ]
 }
 
+
+# SETUP PATH
+
+path add /opt/homebrew/bin
+path add ~/.local/bin
+path add ~/.cargo/bin
+
+# MISE SETUP
+
+source ~/.config/nushell/mise.nu # setup mise with nushell
+
+# ENVIRONMENT
+
+$env.config.buffer_editor = "nvim"
+$env.EDITOR = "nvim"
+
+mkdir ~/.cache/starship
+starship init nu | save -f ~/.cache/starship/init.nu
+zoxide init nushell | save -f ~/.zoxide.nu
+
+$env.STARSHIP_CONFIG = "/Users/philipkrueck/.config/starship/starship.toml"
+$env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
+
+# Env for namecheap
+source ~/.config/nushell/namecheap/env.nu
+
+mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
+
+
 # ALIASES
 source aliases/git.nu
 source aliases/k8s.nu
