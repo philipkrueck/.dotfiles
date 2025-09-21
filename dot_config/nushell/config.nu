@@ -915,6 +915,7 @@ $env.config = {
 
 # SETUP PATH
 
+use std/util "path add"
 path add /opt/homebrew/bin
 path add ~/.local/bin
 path add ~/.cargo/bin
@@ -935,12 +936,12 @@ zoxide init nushell | save -f ~/.zoxide.nu
 $env.STARSHIP_CONFIG = "/Users/philipkrueck/.config/starship/starship.toml"
 $env.CARAPACE_BRIDGES = 'zsh,fish,bash,inshellisense' # optional
 
-# Env for namecheap
-source ~/.config/nushell/namecheap/env.nu
 
 mkdir ~/.cache/carapace
 carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
 
+# WORK ENVIRONMENT
+source ~/.config/nushell/namecheap/env.nu # Env for namecheap
 
 # ALIASES
 source aliases/git.nu

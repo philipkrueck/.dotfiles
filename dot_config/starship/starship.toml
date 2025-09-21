@@ -1,7 +1,7 @@
 add_newline = false
 
 # A minimal left prompt
-format = "$directory$character"
+format = "$directory"
 palette = "catppuccin_mocha"
 right_format = "$all" # move the rest of the prompt to the right
 
@@ -12,6 +12,9 @@ truncation_length = 8
 
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
+
+[character]
+disabled = true
 
 [golang]
 disabled = true
