@@ -8,6 +8,7 @@ def tmux_session [] {
       ~/.config
       ~/Downloads
       "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Brain"
+      "~/.local/share/chezmoi"
     ] | each { |d| ($d | path expand)}
     let top_dirs_children = $top_dirs | each { |d| ls $d } | flatten | where type == "dir" | get name
     let dirs = $top_dirs_children ++ $single_dirs
