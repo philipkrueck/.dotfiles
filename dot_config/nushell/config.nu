@@ -45,9 +45,10 @@ $env.config.keybindings ++= [
     }
 ]
 
-# ---------------------------------------------------------------------------------------
+
+# ---------------------
 # Environment Variables
-# ---------------------------------------------------------------------------------------
+# ---------------------
 
 
 # SETUP PATH
@@ -56,30 +57,25 @@ path add /opt/homebrew/bin
 path add ~/.local/bin
 path add ~/.cargo/bin
 
-
-
-# MISE SETUP
+# MISE 
 source ~/.config/nushell/mise.nu # setup mise with nushell
-
-
-# ENVIRONMENT
-$env.EDITOR = "nvim"
-
-# STARSHIP
-mkdir ~/.cache/starship
-starship init nu | save -f ~/.cache/starship/init.nu
-$env.STARSHIP_CONFIG = "/Users/philipkrueck/.config/starship/starship.toml"
-use ~/.cache/starship/init.nu
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
 # ZOXIDE
 zoxide init nushell | save -f ~/.zoxide.nu
 
 # CARAPACE
-mkdir ~/.cache/carapace
-carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
 source ~/.cache/carapace/init.nu
 
+# ATUIN
+source ~/.local/share/atuin/init.nu
+
+# STARSHIP
+# https://starship.rs/#nushell
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+# ENVIRONMENT
+$env.EDITOR = "nvim"
 
 # WORK ENVIRONMENT
 source ~/.config/nushell/namecheap/env.nu # Env for namecheap
