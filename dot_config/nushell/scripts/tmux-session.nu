@@ -1,11 +1,10 @@
 def tmux_session [] {
   try {
     let top_dirs = [
-      ~/Developer/Work
-      ~/Developer/Personal
+      ~/Developer/NCCloud
+      ~/Developer/philipkrueck
     ] | each { |d| ($d | path expand) }
     let single_dirs = [
-      ~/.config
       ~/Downloads
       "~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Brain"
       "~/.local/share/chezmoi"
@@ -22,10 +21,11 @@ def tmux_session [] {
     }
 
     try {
-      tmux has-session -t $session # will throw an error if session doesn't exist
+      tmux has-session -t $"=($session)"  # will throw an error if session doesn't exist
+      echo $"Session exits: ($session)"
     } catch {
       tmux new-session -d -s $session -c $session_path # create a new session
-      echo "Created new session: $session"
+      echo $"Created new session: ($session)"
     }
 
     try {
