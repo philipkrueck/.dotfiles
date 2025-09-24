@@ -1,11 +1,17 @@
-#!/bin/bash
+#!/usr/bin/env nu
 
 set pipefail -eou
-
-XDG_CONFIG_HOME="$HOME/.config"
 
 if ! command -v chezmoi >/dev/null; then
   sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply git@github.com:philipkrueck/.dotfiles.git
 fi
+
+# ATUIN
+mkdir ~/.local/share/atuin/
+atuin init nu | save ~/.local/share/atuin/init.nu
+
+# CARAPACE
+# mkdir ~/.cache/carapace
+carapace _carapace nushell | save --force ~/.cache/carapace/init.nu
 
 exit 0
