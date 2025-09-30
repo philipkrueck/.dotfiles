@@ -3,7 +3,7 @@ add_newline = false
 # A minimal left prompt
 format = "$directory"
 palette = "catppuccin_mocha"
-right_format = "$all" # move the rest of the prompt to the right
+right_format = "$all"        # move the rest of the prompt to the right
 
 [directory]
 
