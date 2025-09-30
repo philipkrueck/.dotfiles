@@ -1,7 +1,7 @@
 style = "compact"
 
-[theme]
-name = "catppuccin mocha" # TODO: import this theme
+# [theme]
+# name = "catppuccin mocha" # TODO: import this theme
 
 [keys]
 up_arrow = ""
