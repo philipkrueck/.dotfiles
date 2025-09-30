@@ -1,7 +1,4 @@
 style = "compact"
 
-# [theme]
-# name = "catppuccin mocha" # TODO: import this theme
-
-[keys]
-up_arrow = ""
+# TODO: when pressing up arrow, I simply want to cycle through the previous commands
+# without triggering the fzf history UI
