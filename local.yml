@@ -5,6 +5,4 @@
   tasks:
     - include_tasks: tasks/ssh.yml
     - include_tasks: tasks/brew.yml
-    - include_tasks: tasks/zsh-setup.yml
-    - include_tasks: tasks/node-setup.yml
     - include_tasks: tasks/dots.yml
