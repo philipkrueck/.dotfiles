@@ -34,7 +34,7 @@ $env.config.keybindings ++= [
       }
     }
     {
-      name: tmux_sessionizer
+      name: kube_context
       modifier: CONTROL
       keycode: Char_k
       mode: [emacs, vi_normal, vi_insert]
@@ -60,9 +60,6 @@ path add ~/.cargo/bin
 # MISE 
 source ~/.config/nushell/mise.nu # setup mise with nushell
 
-# ZOXIDE
-zoxide init nushell | save -f ~/.zoxide.nu
-
 # CARAPACE
 source ~/.cache/carapace/init.nu
 
@@ -85,6 +82,7 @@ source ~/.config/nushell/namecheap/env.nu # Env for namecheap
 source aliases/git.nu
 source aliases/k8s.nu
 source aliases/random.nu
+
 
 # SCRIPTS
 source scripts/tmux-session.nu
