@@ -54,6 +54,7 @@ $env.config.keybindings ++= [
 # SETUP PATH
 use std/util "path add"
 path add /opt/homebrew/bin
+path add ~/.config/nushell/scripts/
 path add ~/.local/bin
 path add ~/.cargo/bin
 
@@ -65,11 +66,6 @@ source ~/.cache/carapace/init.nu
 
 # ATUIN
 source ~/.local/share/atuin/init.nu
-
-# STARSHIP
-# https://starship.rs/#nushell
-mkdir ($nu.data-dir | path join "vendor/autoload")
-starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
 
 # ENVIRONMENT
 $env.EDITOR = "nvim"
@@ -84,8 +80,15 @@ source aliases/k8s.nu
 source aliases/random.nu
 
 
+# STARSHIP
+# https://starship.rs/#nushell
+$env.STARSHIP_CONFIG = ($env.HOME | path join ".config" "starship" "starship.toml")
+mkdir ($nu.data-dir | path join "vendor/autoload")
+starship init nu | save -f ($nu.data-dir | path join "vendor/autoload/starship.nu")
+
+
 # SCRIPTS
-source scripts/tmux-session.nu
+chmod +x ~/.config/nushell/scripts/tmux_session
 
 
 # TODO: figure out why vivid is not there
