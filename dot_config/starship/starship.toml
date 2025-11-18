@@ -1,8 +1,8 @@
 add_newline = false
 
 # A minimal left prompt
-format = "$directory"
 palette = "catppuccin_mocha"
+format = "$directory"
 right_format = "$all"        # move the rest of the prompt to the right
 
 [directory]
@@ -13,45 +13,33 @@ truncation_length = 8
 [git_status]
 format = "([$all_status$ahead_behind]($style) )"
 
+# Disable most things to make it more minimal
 [character]
 disabled = true
-
 [golang]
 disabled = true
-
 [kubernetes]
 disabled = true
-
 [python]
 disabled = true
-
 [username]
 disabled = true
-
 [gcloud]
 disabled = true
-
 [aws]
 disabled = true
-
 [nodejs]
 disabled = true
-
 [docker_context]
 disabled = true
-
 [vagrant]
 disabled = true
-
 [cmake]
 disabled = true
-
 [terraform]
 disabled = true
-
 [rust]
 disabled = true
-
 [lua]
 disabled = true
 
