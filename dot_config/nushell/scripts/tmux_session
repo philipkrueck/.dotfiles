@@ -1,3 +1,5 @@
+#!/usr/bin/env nu
+
 def github_repos [org symbol] {
   let repos_base_path = "~/Developer" | path expand
   let org_path = $repos_base_path | path join $org
@@ -16,7 +18,7 @@ let single_projects =  [
     { symbol: "↓", name: "Downloads", path: ("~/Downloads" | path expand) }
   ]
 
-def tmux_session [] {
+def main [] {
   try {
     let work_repos = github_repos "NCCloud" "≡"
     let personal_repos = github_repos "philipkrueck" "✦"
@@ -52,6 +54,3 @@ def tmux_session [] {
     echo "Cancelled."
   }
 }
-
-
-
