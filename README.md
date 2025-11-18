@@ -11,7 +11,9 @@ The amount of manual work should be minimal and documented.
 
 The goal is to have a workstation that doesn't have localized state.
 
-The entire state of my workstation should be restorable from remote storage. This includes code from git repos, applications from configuration or scripts, and data from cloud storage.
+The entire state of my workstation should be restorable from remote storage.
+This includes code from git repos, applications from configuration or scripts,
+and data from cloud storage.
 
 ### Reproducibility
 
