@@ -13,7 +13,7 @@ def github_repos [org symbol] {
 }
 
 let single_projects =  [
-    { symbol: "☍", name: "Brain", path: ("~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Brain" | path expand) }
+    { symbol: "☍", name: "Brain", path: ("~/Developer/philipkrueck/Brain" | path expand) }
     { symbol: "∼", name: "dotfiles", path: ("~/.local/share/chezmoi" | path expand) }
     { symbol: "↓", name: "Downloads", path: ("~/Downloads" | path expand) }
   ]
@@ -21,8 +21,9 @@ let single_projects =  [
 def main [] {
   try {
     let work_repos = github_repos "NCCloud" "≡"
+    let spaceship_work_repos = github_repos "Spaceship" "≡"
     let personal_repos = github_repos "philipkrueck" "✦"
-    let repos = $single_projects ++ $personal_repos ++ $work_repos
+    let repos = $single_projects ++ $personal_repos ++ $work_repos ++ $spaceship_work_repos
 
     let selectable_names = $repos | each { |repo| $repo.symbol ++ " " ++ $repo.name }
     echo repo_names
